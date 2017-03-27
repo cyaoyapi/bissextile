@@ -1,15 +1,25 @@
 #!/usr/bin/python
 #-*- coding:utf-8 -*-
 
-annee = int(raw_input("Entrez l'année : \n"))
+"""Ce module vous permet de tester si une année est bissexitle ou pas"""
 
-if annee%4 == 0:
-	if annee%100 == 0:
-		if annee%400 == 0:
-			print annee," est une année bissextile.\n"
+print("Ce programme vous permet de tester si une année est bissexitle ou pas.\n")
+
+quitter = raw_input("Voulez-vous demarrez le programme ?\nTapez 'o' pour 'oui' et 'n' pour 'non'\n")
+
+while quitter.upper() == "O":
+	annee = int(raw_input("Entrez l'année : \n"))
+	if annee%4 == 0:
+		if annee%100 == 0:
+			if annee%400 == 0:
+				print annee," est une année bissextile.\n"
+			else:
+				print annee," n'est pas une année bissextile.\n"
 		else:
-			print annee," n'est pas une année bissextile.\n"
+			print annee," est une année bissextile"
 	else:
-		print annee," est une année bissextile"
-else:
-	print annee," n'est pas une année bissextile.\n"
+			print annee," n'est pas une année bissextile.\n"
+
+	quitter = raw_input("Voulez-vous continuez le programme ?\nTapez 'o' pour 'oui' et 'n' pour 'non'\n")
+
+print("Fin du programme. Merci et à bientôt!\n")
