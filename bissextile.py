@@ -12,4 +12,4 @@ if annee%4 == 0:
 	else:
 		print annee," est une année bissextile"
 else:
-	print annee," n'est pas une année bissextile.\n""
+	print annee," n'est pas une année bissextile.\n"
